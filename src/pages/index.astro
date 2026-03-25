@@ -404,7 +404,89 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- ============================================================
-         SECTION 8 — PRICING TEASER
+         SECTION 8 — TESTIMONIALS
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-100" aria-label="Customer testimonials">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Real results</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Sales teams that switched to Prospex
+          </h2>
+          <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+            Don't take our word for it — here's what happened when they automated the right way.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              quote: "We went from 3 booked meetings per rep per week to 11. The AI personalization actually gets replies — not ignored. Our SDR team thinks it's magic.",
+              name: "Sarah Chen",
+              title: "VP of Sales",
+              company: "Momentum CX",
+              metric: "3.6× more meetings booked"
+            },
+            {
+              quote: "I was skeptical about LinkedIn automation after getting our old tool's account flagged. Prospex's SafeGuard tech is real — 6 months in, zero restrictions. And our pipeline is up 210%.",
+              name: "Marcus Rivera",
+              title: "Head of Business Development",
+              company: "Scalepath B2B",
+              metric: "210% pipeline increase"
+            },
+            {
+              quote: "Our outbound used to be a full-time job for two people. Now one rep manages it in 2 hours a week. The sequences write themselves and the CRM sync saves us hours of admin.",
+              name: "Priya Nambiar",
+              title: "Sales Director",
+              company: "Fenwick Partners",
+              metric: "75% reduction in manual work"
+            }
+          ].map((t, i) => (
+            <div class={`relative rounded-xl border border-surface-300/20 bg-surface-50 p-7 flex flex-col animate-slide-up delay-${(i + 1) * 100}`}>
+              <!-- Quote mark -->
+              <div class="mb-5 text-brand-500/20 font-display text-7xl font-extrabold leading-none select-none" aria-hidden="true">&ldquo;</div>
+              <!-- Metric badge -->
+              <div class="mb-4 inline-flex self-start items-center rounded-full bg-brand-500/10 border border-brand-500/20 px-3 py-1">
+                <span class="text-xs font-bold text-brand-400 tabular-nums">{t.metric}</span>
+              </div>
+              <!-- Quote text -->
+              <blockquote class="text-sm text-surface-700 leading-relaxed flex-1 mb-6">
+                "{t.quote}"
+              </blockquote>
+              <!-- Author -->
+              <div class="flex items-center gap-3 border-t border-surface-300/20 pt-5">
+                <!-- Avatar placeholder -->
+                <div class="h-9 w-9 shrink-0 rounded-full bg-gradient-to-br from-brand-500/30 to-brand-600/20 flex items-center justify-center">
+                  <span class="text-xs font-bold text-brand-400">{t.name.charAt(0)}</span>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-surface-900">{t.name}</p>
+                  <p class="text-xs text-surface-600">{t.title}, {t.company}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Trust signals row -->
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-center">
+          {[
+            { value: '4.9/5', label: 'Average G2 rating' },
+            { value: '1,000+', label: 'Teams worldwide' },
+            { value: '98%', label: 'Customer retention rate' },
+            { value: '< 10 min', label: 'Average setup time' },
+          ].map((stat) => (
+            <div class="px-6 py-4 rounded-xl border border-surface-300/20 bg-surface-50 min-w-[140px]">
+              <p class="font-display text-2xl font-extrabold text-surface-900 tabular-nums">{stat.value}</p>
+              <p class="text-xs text-surface-600 mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 10 — PRICING TEASER
     ============================================================ -->
     <section class="py-20 md:py-28 bg-surface-100" id="pricing" aria-label="Pricing">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
