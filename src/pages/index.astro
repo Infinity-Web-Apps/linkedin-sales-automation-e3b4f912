@@ -1,0 +1,559 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Prospex — Your Pipeline, Engineered."
+  description="AI-powered LinkedIn outreach for B2B sales teams. Find, engage, and convert your ideal prospects on autopilot — without risking your LinkedIn account."
+>
+  <Header />
+  <main>
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+    ============================================================ -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden" aria-label="Hero" id="hero">
+      <!-- Layered navy/blue gradient backgrounds -->
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--color-surface-50) 0%, var(--color-surface-100) 100%);" aria-hidden="true"></div>
+      <!-- Blue radial glow - top right -->
+      <div class="absolute -top-32 -right-32 h-[700px] w-[700px] rounded-full opacity-15"
+           style="background: radial-gradient(circle, #2563EB 0%, transparent 70%);"
+           aria-hidden="true"></div>
+      <!-- Softer blue glow - bottom left -->
+      <div class="absolute -bottom-48 -left-48 h-[600px] w-[600px] rounded-full opacity-10"
+           style="background: radial-gradient(circle, #60A5FA 0%, transparent 70%);"
+           aria-hidden="true"></div>
+      <!-- Subtle grid overlay -->
+      <div class="absolute inset-0 opacity-[0.035]"
+           style="background-image: linear-gradient(var(--color-surface-700) 1px, transparent 1px), linear-gradient(90deg, var(--color-surface-700) 1px, transparent 1px); background-size: 48px 48px;"
+           aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div class="max-w-4xl">
+          <!-- Eyebrow badge -->
+          <div class="animate-slide-up mb-6 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1.5">
+            <span class="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-brand-400">AI-Powered LinkedIn Sales Engine</span>
+          </div>
+
+          <!-- H1 -->
+          <h1 class="animate-slide-up delay-100 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-surface-900 lg:text-7xl">
+            Your Pipeline,<br />
+            <span class="text-brand-400">Engineered.</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="animate-slide-up delay-200 mt-6 max-w-2xl text-xl leading-relaxed text-surface-700">
+            AI-powered LinkedIn outreach that finds, engages, and converts your ideal prospects — on autopilot. No spam. No bans. Just booked meetings.
+          </p>
+
+          <!-- Email capture form -->
+          <form class="animate-slide-up delay-300 mt-8 flex flex-col gap-3 sm:flex-row sm:items-start" action="#" method="POST">
+            <div class="flex-1">
+              <label for="hero-email" class="sr-only">Work email address</label>
+              <input
+                id="hero-email"
+                type="email"
+                name="email"
+                placeholder="Enter your work email"
+                required
+                class="w-full rounded-lg border border-surface-300/40 bg-surface-200/60 px-4 py-3.5 text-base text-surface-900 placeholder-surface-600 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors"
+              />
+            </div>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-brand-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-0.5 transition-all duration-150"
+            >
+              Start Free — No Credit Card
+              <svg class="ml-2 h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Microcopy -->
+          <p class="animate-slide-up delay-400 mt-3 text-sm text-surface-600">
+            Free 14-day trial · No credit card required · Set up in under 10 minutes
+          </p>
+
+          <!-- Stats bar -->
+          <div class="animate-slide-up delay-500 mt-12 flex flex-wrap gap-8 border-t border-surface-300/20 pt-8">
+            <div>
+              <p class="text-2xl font-bold tabular-nums text-surface-900 font-display">1,000+</p>
+              <p class="text-sm text-surface-600 mt-0.5">B2B sales teams</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold tabular-nums text-surface-900 font-display">4.2×</p>
+              <p class="text-sm text-surface-600 mt-0.5">average reply rate lift</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold tabular-nums text-surface-900 font-display">0</p>
+              <p class="text-sm text-surface-600 mt-0.5">account bans on record</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold tabular-nums text-surface-900 font-display">65%</p>
+              <p class="text-sm text-surface-600 mt-0.5">less time on manual work</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — SOCIAL PROOF BAR
+    ============================================================ -->
+    <section class="border-y border-surface-300/20 bg-surface-100 py-10" aria-label="Trusted by">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs font-semibold uppercase tracking-widest text-surface-600 mb-8">
+          Trusted by 1,000+ B2B sales teams at companies like
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          <!-- Placeholder company names as styled text logos -->
+          {['Acme Corp', 'Vertex AI', 'Salesforce', 'HubSpot', 'Outreach', 'Apollo'].map((name) => (
+            <span class="text-sm font-semibold tracking-wide text-surface-500 opacity-60 hover:opacity-90 transition-opacity cursor-default">
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — PROBLEM STATEMENT
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-50" aria-label="The Problem">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">The Problem</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            LinkedIn outreach is broken — and it's costing you pipeline
+          </h2>
+          <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+            Sales reps waste 65% of their time on manual prospecting, according to Forbes. Meanwhile, generic templates get ignored, account restrictions pile up, and revenue targets slip further away.
+          </p>
+        </div>
+
+        <!-- Pain point cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {[
+            {
+              icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+              title: 'Generic templates get ignored',
+              desc: 'Copy-paste messages feel like spam — because they are. Decision-makers delete them without reading.'
+            },
+            {
+              icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>`,
+              title: 'Account restrictions kill momentum',
+              desc: 'LinkedIn flags aggressive outreach and restricts accounts — wiping out weeks of pipeline work overnight.'
+            },
+            {
+              icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+              title: 'Manual work drowns your team',
+              desc: 'Finding prospects, writing messages, following up — hours of work per rep, per day, with zero scale.'
+            },
+            {
+              icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
+              title: 'Disconnected tools, no visibility',
+              desc: 'LinkedIn, CRM, email — three tools, zero sync. You never know which conversations actually convert.'
+            }
+          ].map((pain) => (
+            <div class="flex gap-4 rounded-xl border border-surface-300/20 bg-surface-100 p-5">
+              <div class="shrink-0 text-brand-400 mt-0.5" set:html={pain.icon} />
+              <div>
+                <h3 class="font-semibold text-surface-900 mb-1">{pain.title}</h3>
+                <p class="text-sm text-surface-600 leading-relaxed">{pain.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — 3-PILLAR VALUE PROP (Discover → Engage → Convert)
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-100" id="features" aria-label="Core capabilities">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">How Prospex Works</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Three steps from cold to closed
+          </h2>
+          <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+            Prospex handles the full prospecting lifecycle — so your reps show up to conversations, not spreadsheets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              step: '01',
+              label: 'Discover',
+              icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>`,
+              title: 'Find your ideal buyers',
+              desc: 'AI scans LinkedIn to surface high-intent prospects that match your ICP — filtered by role, company size, growth signals, and buying triggers. No manual searching required.'
+            },
+            {
+              step: '02',
+              label: 'Engage',
+              icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>`,
+              title: 'Send messages that get replies',
+              desc: 'Context-aware AI writes personalized connection requests and follow-ups in your voice. Each message references real signals — recent posts, company news, shared connections — not templates.'
+            },
+            {
+              step: '03',
+              label: 'Convert',
+              icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
+              title: 'Turn conversations into revenue',
+              desc: "Prospex tracks every thread, surfaces hot leads, and syncs to your CRM automatically. Know exactly which prospects are ready to buy — before they tell you."
+            }
+          ].map((pillar, i) => (
+            <div class={`relative rounded-xl border border-surface-300/20 bg-surface-50 p-8 ${i === 1 ? 'border-brand-500/40 ring-1 ring-brand-500/20' : ''}`}>
+              {i === 1 && (
+                <div class="absolute -top-3 left-8">
+                  <span class="inline-flex items-center rounded-full bg-brand-500 px-2.5 py-0.5 text-xs font-semibold text-white">Most popular</span>
+                </div>
+              )}
+              <!-- Step number -->
+              <div class="mb-6 flex items-center gap-3">
+                <span class="font-display text-4xl font-extrabold text-brand-500/20 tabular-nums leading-none">{pillar.step}</span>
+                <span class="rounded-full border border-brand-500/30 bg-brand-500/10 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-brand-400">{pillar.label}</span>
+              </div>
+              <div class="mb-4 text-brand-400" set:html={pillar.icon} />
+              <h3 class="font-display text-xl font-bold text-surface-900 mb-3">{pillar.title}</h3>
+              <p class="text-sm text-surface-600 leading-relaxed">{pillar.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — FEATURE DEEP DIVE
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-50" id="feature-details" aria-label="Features">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Built for scale</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Every tool your sales team needs, in one place
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`,
+              title: 'AI Prospect Discovery',
+              desc: 'Find your ideal buyers before they know they need you. Prospex scores every prospect on fit, intent, and timing — so your team always works the best leads first.'
+            },
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>`,
+              title: 'Smart Sequences',
+              desc: 'Multi-touch campaigns that adapt to every response. Prospex adjusts timing, tone, and messaging based on how prospects engage — automatically.'
+            },
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>`,
+              title: 'AI Message Crafting',
+              desc: 'Every message sounds like you wrote it — because AI learned your voice. Reference recent posts, company news, and mutual connections for genuine personalization at scale.'
+            },
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+              title: 'Account SafeGuard™',
+              desc: 'Built-in compliance so your account stays safe. Human-like send limits, activity patterns, and warm-up protocols keep LinkedIn from flagging your team — ever.'
+            },
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
+              title: 'Pipeline Intelligence Dashboard',
+              desc: 'See exactly which conversations become revenue. Track reply rates, meeting rates, and conversion by rep, campaign, and persona — in one clean dashboard.'
+            },
+            {
+              icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>`,
+              title: 'CRM Sync',
+              desc: 'Push contacts, conversations, and status updates to Salesforce, HubSpot, or Pipedrive automatically. No manual data entry. No duplicate records. Just clean pipeline.'
+            }
+          ].map((feat, i) => (
+            <div class={`rounded-xl border border-surface-300/20 bg-surface-100 p-6 hover:border-brand-500/30 hover:bg-surface-100 transition-colors group animate-slide-up delay-${Math.min((i + 1) * 100, 400)}`}>
+              <div class="mb-4 text-brand-400 group-hover:text-brand-300 transition-colors" set:html={feat.icon} />
+              <h3 class="font-display text-lg font-bold text-surface-900 mb-2">{feat.title}</h3>
+              <p class="text-sm text-surface-600 leading-relaxed">{feat.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — HOW IT WORKS
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-100" id="how-it-works" aria-label="How it works">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Get started fast</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Pipeline flowing in 3 steps
+          </h2>
+          <p class="mt-4 text-lg text-surface-600">
+            From sign-up to booked meetings in under 10 minutes. No dev work. No LinkedIn API keys.
+          </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+          <!-- Connecting line (desktop) -->
+          <div class="hidden md:block absolute top-12 left-[calc(16.66%+1.5rem)] right-[calc(16.66%+1.5rem)] h-px bg-gradient-to-r from-transparent via-brand-500/30 to-transparent" aria-hidden="true"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                step: 1,
+                title: 'Connect LinkedIn',
+                desc: 'Install the Chrome extension and connect your LinkedIn account in one click. Prospex syncs your profile, network, and messaging history securely.',
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`
+              },
+              {
+                step: 2,
+                title: 'Set your targeting',
+                desc: 'Define your ICP: job titles, company size, industry, geography, and buying signals. Prospex builds your prospect list and scores every lead automatically.',
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>`
+              },
+              {
+                step: 3,
+                title: 'Watch pipeline grow',
+                desc: 'Prospex runs your sequences, tracks every reply, and surfaces meetings-ready leads. Your dashboard shows exactly what\'s working and what\'s not.',
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`
+              }
+            ].map((item, i) => (
+              <div class={`text-center animate-slide-up delay-${(i + 1) * 100}`}>
+                <!-- Step circle -->
+                <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400">
+                  <div set:html={item.icon} />
+                </div>
+                <div class="mb-1 text-xs font-semibold uppercase tracking-wider text-surface-600">Step {item.step}</div>
+                <h3 class="font-display text-xl font-bold text-surface-900 mb-3">{item.title}</h3>
+                <p class="text-sm text-surface-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 7 — COMPARISON
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-50" aria-label="Comparison">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Why Prospex</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Most tools automate the spam.<br class="hidden md:block" /> Prospex automates the strategy.
+          </h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto overflow-hidden rounded-xl border border-surface-300/20">
+          <!-- Table header -->
+          <div class="grid grid-cols-3 bg-surface-100 border-b border-surface-300/20">
+            <div class="p-5 text-sm font-semibold text-surface-600 uppercase tracking-wide">Capability</div>
+            <div class="p-5 text-center text-sm font-semibold text-surface-600 uppercase tracking-wide border-l border-surface-300/20">Other tools</div>
+            <div class="p-5 text-center border-l border-brand-500/30 bg-brand-500/5">
+              <span class="text-sm font-bold text-brand-400 uppercase tracking-wide">Prospex</span>
+            </div>
+          </div>
+
+          <!-- Table rows -->
+          {[
+            ['AI prospect scoring', false, true],
+            ['Account-safe send limits', false, true],
+            ['Personalized at the sentence level', false, true],
+            ['Adapts to prospect responses', false, true],
+            ['CRM sync (Salesforce, HubSpot)', false, true],
+            ['Pipeline attribution dashboard', false, true],
+            ['Mass connection blasting', true, false],
+            ['Template-only messaging', true, false],
+          ].map(([feature, other, us]) => (
+            <div class="grid grid-cols-3 border-b border-surface-300/20 last:border-0 hover:bg-surface-100/50 transition-colors">
+              <div class="p-4 text-sm text-surface-700">{feature}</div>
+              <div class="p-4 text-center border-l border-surface-300/20">
+                {other ? (
+                  <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-300/30 text-surface-500">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </span>
+                ) : (
+                  <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-300/20 text-surface-500">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/></svg>
+                  </span>
+                )}
+              </div>
+              <div class="p-4 text-center border-l border-brand-500/30 bg-brand-500/5">
+                {us ? (
+                  <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-500/20 text-brand-400">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                ) : (
+                  <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-300/20 text-surface-600 opacity-40">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8 — PRICING TEASER
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-100" id="pricing" aria-label="Pricing">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Pricing</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Start free. Scale as you grow.
+          </h2>
+          <p class="mt-4 text-lg text-surface-600">
+            No per-seat pricing games. Plans that make sense for teams of 1 to 100.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+          {[
+            {
+              name: 'Starter',
+              price: 'Free',
+              period: 'forever',
+              description: 'For individuals testing the waters.',
+              features: ['50 connection requests/month', '1 active sequence', 'Basic AI messaging', 'Email support'],
+              cta: 'Get started free',
+              highlight: false
+            },
+            {
+              name: 'Professional',
+              price: '$79',
+              period: 'per month',
+              description: 'For sales reps who want real pipeline.',
+              features: ['Unlimited prospects', '10 active sequences', 'Full AI personalization', 'Account SafeGuard™', 'CRM sync', 'Priority support'],
+              cta: 'Start my free trial',
+              highlight: true
+            },
+            {
+              name: 'Team',
+              price: '$249',
+              period: 'per month',
+              description: 'For sales teams who close together.',
+              features: ['Everything in Professional', 'Up to 5 seats', 'Team analytics dashboard', 'Pipeline attribution', 'Dedicated onboarding', 'Slack support'],
+              cta: 'Start team trial',
+              highlight: false
+            }
+          ].map((plan) => (
+            <div class={`rounded-xl border p-7 flex flex-col ${plan.highlight ? 'border-brand-500/50 bg-brand-500/5 ring-1 ring-brand-500/20 relative' : 'border-surface-300/20 bg-surface-50'}`}>
+              {plan.highlight && (
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                  <span class="inline-flex items-center rounded-full bg-brand-500 px-3 py-1 text-xs font-bold text-white">Most Popular</span>
+                </div>
+              )}
+              <div class="mb-5">
+                <p class="text-sm font-semibold text-surface-600 uppercase tracking-wide mb-1">{plan.name}</p>
+                <div class="flex items-end gap-1.5 mb-1">
+                  <span class="font-display text-4xl font-extrabold text-surface-900 tabular-nums">{plan.price}</span>
+                  <span class="text-sm text-surface-600 mb-1.5">{plan.period}</span>
+                </div>
+                <p class="text-sm text-surface-600">{plan.description}</p>
+              </div>
+
+              <ul class="space-y-2.5 mb-7 flex-1">
+                {plan.features.map((f) => (
+                  <li class="flex items-center gap-2.5 text-sm text-surface-700">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="text-brand-400 shrink-0">
+                      <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#get-access"
+                class={`block rounded-lg px-5 py-3 text-center text-sm font-semibold transition-colors ${plan.highlight ? 'bg-brand-500 text-white hover:bg-brand-600 shadow-lg shadow-brand-500/25' : 'border border-surface-300/40 text-surface-800 hover:border-surface-400/60 hover:text-surface-900'}`}
+              >
+                {plan.cta}
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-center text-sm text-surface-600 mt-6">
+          All plans include a 14-day free trial. No credit card required. <a href="#" class="text-brand-400 hover:text-brand-300 transition-colors">See full pricing →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9 — FINAL CTA
+    ============================================================ -->
+    <section class="relative overflow-hidden py-24 md:py-32" id="get-access" aria-label="Get started">
+      <!-- Gradient background -->
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--color-surface-100) 0%, var(--color-surface-50) 60%, #0D1F3C 100%);" aria-hidden="true"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full opacity-20"
+           style="background: radial-gradient(circle, #2563EB 0%, transparent 70%);"
+           aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold tracking-tight text-surface-900 mb-4">
+          Ready to engineer<br />your pipeline?
+        </h2>
+        <p class="text-xl text-surface-600 leading-relaxed mb-10">
+          Join 1,000+ sales teams using Prospex to turn LinkedIn into their top revenue channel. Start free — no credit card, no setup fees, no risk.
+        </p>
+
+        <!-- Email capture form -->
+        <form class="flex flex-col gap-3 sm:flex-row sm:items-start max-w-xl mx-auto" action="#" method="POST">
+          <div class="flex-1">
+            <label for="cta-email" class="sr-only">Work email address</label>
+            <input
+              id="cta-email"
+              type="email"
+              name="email"
+              placeholder="Enter your work email"
+              required
+              class="w-full rounded-lg border border-surface-300/40 bg-surface-200/60 px-4 py-3.5 text-base text-surface-900 placeholder-surface-600 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors"
+            />
+          </div>
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-brand-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-0.5 transition-all duration-150"
+          >
+            Get Early Access
+            <svg class="ml-2 h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+
+        <p class="mt-4 text-sm text-surface-600">
+          Free 14-day trial · No credit card required · Cancel anytime
+        </p>
+
+        <!-- Social proof nudge -->
+        <div class="mt-10 flex items-center justify-center gap-6 text-sm text-surface-600">
+          <span class="flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="text-brand-400"><path d="M1 7l3.5 3.5L13 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Set up in 10 minutes
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="text-brand-400"><path d="M1 7l3.5 3.5L13 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            0 account bans on record
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="text-brand-400"><path d="M1 7l3.5 3.5L13 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cancel anytime
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Base>

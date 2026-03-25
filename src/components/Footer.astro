@@ -1,0 +1,116 @@
+---
+const currentYear = new Date().getFullYear();
+
+const columns = [
+  {
+    heading: 'Product',
+    links: [
+      { label: 'Features', href: '#features' },
+      { label: 'How It Works', href: '#how-it-works' },
+      { label: 'Pricing', href: '#pricing' },
+      { label: 'Changelog', href: '/changelog' },
+      { label: 'Roadmap', href: '/roadmap' },
+    ],
+  },
+  {
+    heading: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Press', href: '/press' },
+    ],
+  },
+  {
+    heading: 'Legal',
+    links: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Cookie Policy', href: '/cookies' },
+      { label: 'GDPR', href: '/gdpr' },
+    ],
+  },
+];
+---
+
+<footer class="border-t border-surface-300/20 bg-surface-100">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Top section -->
+    <div class="py-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      <!-- Brand column -->
+      <div class="lg:col-span-2">
+        <a href="/" class="flex items-center gap-2.5 mb-4">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="2" width="2.5" height="12" rx="1" fill="white"/>
+              <rect x="5.5" y="2" width="5" height="2.5" rx="1" fill="white"/>
+              <rect x="10.5" y="2" width="2.5" height="5.5" rx="1" fill="white"/>
+              <rect x="5.5" y="7" width="5" height="2.5" rx="1" fill="white"/>
+            </svg>
+          </div>
+          <span class="font-display text-xl font-bold text-surface-900">Prospex</span>
+        </a>
+        <p class="text-sm text-surface-600 leading-relaxed max-w-xs">
+          AI-powered LinkedIn outreach for B2B sales teams who want pipeline, not busywork.
+        </p>
+
+        <!-- Social icons -->
+        <div class="mt-6 flex items-center gap-3">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-400/30 text-surface-600 hover:border-brand-500/50 hover:text-brand-400 transition-colors"
+            aria-label="Follow Prospex on LinkedIn"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-400/30 text-surface-600 hover:border-brand-500/50 hover:text-brand-400 transition-colors"
+            aria-label="Follow Prospex on Twitter / X"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      {columns.map((col) => (
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-surface-600 mb-4">
+            {col.heading}
+          </h3>
+          <ul class="space-y-3">
+            {col.links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-surface-700 hover:text-surface-900 transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-surface-300/20 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-surface-600">
+        &copy; {currentYear} Prospex, Inc. All rights reserved.
+      </p>
+      <p class="text-xs text-surface-600">
+        Built for sales teams who measure success in closed deals, not sent messages.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,92 @@
+---
+const navLinks = [
+  { label: 'Features', href: '#features' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-surface-300/20 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--color-surface-50) 85%, transparent);">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500">
+          <!-- P letter mark -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="2" width="2.5" height="12" rx="1" fill="white"/>
+            <rect x="5.5" y="2" width="5" height="2.5" rx="1" fill="white"/>
+            <rect x="10.5" y="2" width="2.5" height="5.5" rx="1" fill="white"/>
+            <rect x="5.5" y="7" width="5" height="2.5" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span class="font-display text-xl font-bold text-surface-900 group-hover:text-brand-400 transition-colors">
+          Prospex
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-surface-700 hover:text-surface-900 transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center gap-3">
+        <a
+          href="#"
+          class="text-sm font-medium text-surface-700 hover:text-surface-900 transition-colors"
+        >
+          Sign in
+        </a>
+        <a
+          href="#get-access"
+          class="inline-flex items-center rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/25"
+        >
+          Start Free Trial
+        </a>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <label class="md:hidden cursor-pointer p-2 rounded-lg text-surface-700 hover:text-surface-900 hover:bg-surface-300/20 transition-colors" for="mobile-menu-toggle">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="sr-only">Toggle menu</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Mobile menu (CSS-only) -->
+  <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+  <div class="hidden peer-checked:block md:hidden border-t border-surface-300/20 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--color-surface-100) 95%, transparent);">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="rounded-lg px-3 py-2.5 text-sm font-medium text-surface-700 hover:bg-surface-300/20 hover:text-surface-900 transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="mt-3 pt-3 border-t border-surface-300/20 flex flex-col gap-2">
+        <a href="#" class="rounded-lg px-3 py-2.5 text-sm font-medium text-surface-700 hover:bg-surface-300/20 hover:text-surface-900 transition-colors">
+          Sign in
+        </a>
+        <a
+          href="#get-access"
+          class="rounded-lg bg-brand-500 px-3 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-600 transition-colors"
+        >
+          Start Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
