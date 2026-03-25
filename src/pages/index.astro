@@ -573,7 +573,222 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- ============================================================
-         SECTION 9 — FINAL CTA
+         SECTION 9 — PRODUCT DASHBOARD SHOWCASE
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-50 overflow-hidden" aria-label="Product preview">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">See it in action</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Your entire pipeline, in one view
+          </h2>
+          <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+            A live dashboard built for sales reps — not data analysts. Every metric that matters, zero noise.
+          </p>
+        </div>
+
+        <!-- CSS Dashboard Mockup -->
+        <div class="relative mx-auto max-w-5xl" data-reveal>
+          <!-- Browser chrome -->
+          <div class="rounded-2xl border border-surface-300/30 bg-surface-100 shadow-2xl shadow-black/40 overflow-hidden">
+            <!-- Browser bar -->
+            <div class="flex items-center gap-2 px-4 py-3 border-b border-surface-300/20 bg-surface-200/60">
+              <span class="h-3 w-3 rounded-full bg-red-500/60"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-500/60"></span>
+              <span class="h-3 w-3 rounded-full bg-green-500/60"></span>
+              <div class="ml-4 flex-1 max-w-xs">
+                <div class="rounded-md bg-surface-300/30 border border-surface-300/20 px-3 py-1 text-xs text-surface-600 font-mono">
+                  app.prospex.io/dashboard
+                </div>
+              </div>
+            </div>
+
+            <!-- Dashboard content -->
+            <div class="p-6 lg:p-8">
+              <!-- Top nav -->
+              <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-6">
+                  <span class="text-sm font-semibold text-brand-400 border-b-2 border-brand-500 pb-1">Overview</span>
+                  <span class="text-sm text-surface-600">Sequences</span>
+                  <span class="text-sm text-surface-600">Prospects</span>
+                  <span class="text-sm text-surface-600">Inbox</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="rounded-lg border border-surface-300/30 bg-surface-200/50 px-3 py-1.5 text-xs text-surface-600">
+                    Last 30 days
+                  </div>
+                  <div class="rounded-lg bg-brand-500 px-3 py-1.5 text-xs font-semibold text-white">
+                    + New Sequence
+                  </div>
+                </div>
+              </div>
+
+              <!-- KPI metrics row -->
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                {[
+                  { label: 'Prospects reached', value: '2,847', delta: '+18%', up: true },
+                  { label: 'Reply rate', value: '34.2%', delta: '+6.1pp', up: true },
+                  { label: 'Meetings booked', value: '41', delta: '+23%', up: true },
+                  { label: 'Account status', value: 'Safe', delta: '0 flags', up: true },
+                ].map((kpi) => (
+                  <div class="rounded-xl border border-surface-300/20 bg-surface-50 p-4">
+                    <p class="text-xs text-surface-600 mb-1">{kpi.label}</p>
+                    <p class="font-display text-2xl font-extrabold text-surface-900 tabular-nums">{kpi.value}</p>
+                    <p class={`text-xs font-semibold mt-1 ${kpi.up ? 'text-emerald-400' : 'text-red-400'}`}>{kpi.delta}</p>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Two-column bottom -->
+              <div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
+                <!-- Activity chart (left, wider) -->
+                <div class="lg:col-span-3 rounded-xl border border-surface-300/20 bg-surface-50 p-5">
+                  <div class="flex items-center justify-between mb-5">
+                    <p class="text-sm font-semibold text-surface-800">Outreach activity</p>
+                    <div class="flex items-center gap-3 text-xs text-surface-600">
+                      <span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-brand-500"></span>Sent</span>
+                      <span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>Replies</span>
+                    </div>
+                  </div>
+                  <!-- Bar chart simulation -->
+                  <div class="flex items-end gap-2 h-28">
+                    {[55, 72, 48, 89, 63, 94, 71, 85, 110, 98, 76, 130, 88, 115].map((h, i) => (
+                      <div class="flex-1 flex flex-col gap-1 items-center">
+                        <div
+                          class="w-full rounded-sm bg-brand-500/20"
+                          style={`height: ${h * 0.85}px; max-height: 100%;`}
+                        ></div>
+                        <div
+                          class="w-full rounded-sm bg-emerald-400/50"
+                          style={`height: ${Math.round(h * 0.32)}px;`}
+                        ></div>
+                      </div>
+                    ))}
+                  </div>
+                  <div class="mt-3 flex justify-between text-[10px] text-surface-600">
+                    <span>Mar 1</span>
+                    <span>Mar 7</span>
+                    <span>Mar 14</span>
+                    <span>Mar 21</span>
+                    <span>Mar 28</span>
+                  </div>
+                </div>
+
+                <!-- Hot prospects list (right, narrower) -->
+                <div class="lg:col-span-2 rounded-xl border border-surface-300/20 bg-surface-50 p-5">
+                  <p class="text-sm font-semibold text-surface-800 mb-4">Hot prospects</p>
+                  <div class="space-y-3">
+                    {[
+                      { name: 'James L.', role: 'VP Sales · TechFlow', score: 94, status: 'Meeting set' },
+                      { name: 'Anika S.', role: 'Head of Growth · Axiom', score: 87, status: 'Replied' },
+                      { name: 'Derek M.', role: 'CRO · Foundry Labs', score: 81, status: 'Replied' },
+                      { name: 'Sophia R.', role: 'Dir. BD · Pulse IO', score: 75, status: 'Opened' },
+                    ].map((p) => (
+                      <div class="flex items-center gap-3">
+                        <div class="h-7 w-7 shrink-0 rounded-full bg-brand-500/15 flex items-center justify-center">
+                          <span class="text-[10px] font-bold text-brand-400">{p.name.charAt(0)}</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                          <p class="text-xs font-semibold text-surface-900 truncate">{p.name}</p>
+                          <p class="text-[10px] text-surface-600 truncate">{p.role}</p>
+                        </div>
+                        <div class={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${p.status === 'Meeting set' ? 'bg-emerald-400/15 text-emerald-400' : p.status === 'Replied' ? 'bg-brand-500/15 text-brand-400' : 'bg-surface-300/30 text-surface-600'}`}>
+                          {p.status}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glow under dashboard -->
+          <div class="absolute -bottom-10 left-1/4 right-1/4 h-24 rounded-full opacity-20 blur-2xl" style="background: radial-gradient(ellipse, #2563EB, transparent);" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 10 — FAQ
+    ============================================================ -->
+    <section class="py-20 md:py-28 bg-surface-100" id="faq" aria-label="Frequently asked questions">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">Got questions?</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-surface-900">
+            Everything you need to know
+          </h2>
+          <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+            Honest answers to the questions sales teams ask before switching to Prospex.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-3" data-reveal>
+          {[
+            {
+              q: 'Will Prospex get my LinkedIn account restricted or banned?',
+              a: 'No — and this is where Prospex is fundamentally different. Our Account SafeGuard™ system enforces human-like activity patterns: gradual warm-up ramps, send limits that mirror real behavior, and randomized timing. We\'ve processed outreach for 1,000+ teams with zero account bans on record. If LinkedIn changes its detection patterns, our system adapts automatically.'
+            },
+            {
+              q: 'How is this different from tools like Expandi, Dux-Soup, or PhantomBuster?',
+              a: 'Most tools automate the mechanics — connection requests, follow-ups — but still require you to write template messages. Prospex adds an AI layer that personalizes every message using real signals: the prospect\'s recent posts, company milestones, shared connections, and role. The result is messages that feel handwritten, not automated.'
+            },
+            {
+              q: 'How quickly can I expect to see results?',
+              a: 'Most teams see a measurable lift in reply rates within 7–14 days of going live. Meetings typically start appearing in week 2–3, once sequences mature. Full pipeline impact (pipeline value, conversion rates) takes 30–60 days to measure accurately. We provide a dashboard that shows your exact progress from day one.'
+            },
+            {
+              q: 'Does Prospex integrate with my CRM?',
+              a: 'Yes. Native two-way sync with Salesforce, HubSpot, and Pipedrive is included on all paid plans. Contacts, conversation history, meeting outcomes, and lead scores push to your CRM automatically. We also support Zapier and webhooks for custom integrations.'
+            },
+            {
+              q: 'Do I need a LinkedIn Premium or Sales Navigator subscription?',
+              a: 'A free LinkedIn account works for most features. LinkedIn Sales Navigator ($99/month) unlocks advanced search filters and extended reach. We recommend Sales Navigator for teams targeting 500+ prospects per month — and Prospex\'s ROI more than offsets the cost.'
+            },
+            {
+              q: 'Can my whole sales team use Prospex from one account?',
+              a: 'Our Team plan supports up to 5 LinkedIn seats under one Prospex account. Each seat connects its own LinkedIn profile — outreach comes from individual reps, not a company account. For larger teams, contact us for Enterprise pricing with unlimited seats.'
+            },
+            {
+              q: 'What happens if I exceed my plan limits?',
+              a: 'We never cut off active sequences mid-campaign. If you hit your monthly limit, new sequences pause until the next billing cycle — or you can upgrade instantly from your dashboard. No hidden overage fees.'
+            },
+            {
+              q: 'Is there a free trial? Do I need a credit card to start?',
+              a: 'Yes, all plans include a 14-day free trial with full Professional features. No credit card required to sign up. You only need payment details if you decide to continue after the trial — and you can cancel any time before that with zero charges.'
+            },
+          ].map((faq, i) => (
+            <details class="group rounded-xl border border-surface-300/20 bg-surface-50 open:border-brand-500/30 transition-colors">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-sm font-semibold text-surface-900 hover:text-surface-900 list-none">
+                <span>{faq.q}</span>
+                <span class="shrink-0 h-5 w-5 rounded-full border border-surface-400/40 flex items-center justify-center group-open:border-brand-500/50 group-open:bg-brand-500/10 transition-colors">
+                  <svg class="h-3 w-3 text-surface-600 group-open:text-brand-400 group-open:rotate-45 transition-all duration-200" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-6 pb-5 text-sm text-surface-600 leading-relaxed border-t border-surface-300/20 pt-4">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+
+        <!-- Support nudge -->
+        <div class="mt-10 text-center">
+          <p class="text-sm text-surface-600">
+            Still have questions?
+            <a href="mailto:hello@prospex.io" class="text-brand-400 hover:text-brand-300 transition-colors font-medium ml-1">
+              Email our team →
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 11 — FINAL CTA
     ============================================================ -->
     <section class="relative overflow-hidden py-24 md:py-32" id="get-access" aria-label="Get started">
       <!-- Gradient background -->
@@ -639,3 +854,27 @@ import Footer from '../components/Footer.astro';
   </main>
   <Footer />
 </Base>
+
+<script>
+  // Scroll-reveal: animate elements with [data-reveal] when they enter the viewport
+  const revealEls = document.querySelectorAll('[data-reveal]');
+
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+  } else {
+    // Fallback: show all immediately
+    revealEls.forEach((el) => el.classList.add('revealed'));
+  }
+</script>
